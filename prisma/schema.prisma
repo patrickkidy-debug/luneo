@@ -2,9 +2,12 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Neon Postgres. These are the variables Netlify's Neon extension sets;
+// for local work, copy the same two values into .env.
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("NETLIFY_DATABASE_URL")
+  directUrl = env("NETLIFY_DATABASE_URL_UNPOOLED")
 }
 
 enum Gender {

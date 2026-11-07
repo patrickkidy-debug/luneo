@@ -63,10 +63,10 @@ export async function getProducts(filters: ProductFilters = {}): Promise<Product
   if (filters.inStock) where.stock = { gt: 0 };
   if (filters.q) {
     where.OR = [
-      { name: { contains: filters.q } },
-      { reference: { contains: filters.q } },
-      { brand: { name: { contains: filters.q } } },
-      { category: { name: { contains: filters.q } } },
+      { name: { contains: filters.q, mode: "insensitive" } },
+      { reference: { contains: filters.q, mode: "insensitive" } },
+      { brand: { name: { contains: filters.q, mode: "insensitive" } } },
+      { category: { name: { contains: filters.q, mode: "insensitive" } } },
     ];
   }
 
