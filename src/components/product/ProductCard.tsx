@@ -32,9 +32,9 @@ export function ProductCard({ product }: { product: ProductCardData }) {
   return (
     <Link
       href={`/produit/${product.slug}`}
-      className="group block overflow-hidden rounded-2xl border border-luneo-gray-border bg-white transition-shadow hover:shadow-lg"
+      className="group block rounded-2xl bg-luneo-card p-2.5 shadow-[0_2px_0_rgb(0_0_0/0.06)] transition-shadow hover:shadow-[6px_6px_0_var(--color-luneo-red)]"
     >
-      <div className="relative aspect-square overflow-hidden bg-luneo-gray">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-white">
         {product.image ? (
           <Image
             src={product.image}
@@ -60,28 +60,27 @@ export function ProductCard({ product }: { product: ProductCardData }) {
             Promo
           </span>
         )}
-      </div>
 
-      <div className="p-4">
-        <p className="text-xs font-medium uppercase tracking-wide text-black/50">
-          {product.brandName}
-        </p>
-        <h3 className="mt-1 truncate text-sm font-semibold text-luneo-black">
-          {product.name}
-        </h3>
-        <p className="mt-0.5 text-xs text-black/40">Réf. {product.reference}</p>
-
-        <div className="mt-3 flex items-center justify-between gap-2">
-          <Price price={product.price} compareAtPrice={product.compareAtPrice} size="sm" />
-        </div>
-
+        {/* Revealed on hover where hovering exists; always shown on touch screens */}
         <button
           type="button"
           onClick={handleAddToCart}
-          className="mt-3 w-full rounded-full bg-luneo-black py-2.5 text-xs font-semibold text-white transition-colors hover:bg-luneo-red"
+          className="absolute inset-x-3 bottom-3 rounded-full bg-luneo-black py-2.5 text-xs font-semibold text-white transition-all duration-200 hover:bg-luneo-red [@media(hover:hover)]:translate-y-2 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:translate-y-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:focus-visible:translate-y-0 [@media(hover:hover)]:focus-visible:opacity-100"
         >
           Ajouter au panier
         </button>
+      </div>
+
+      <div className="px-1.5 pb-1.5 pt-3">
+        <p className="text-[11px] font-bold uppercase italic tracking-[0.15em] text-luneo-red">
+          {product.brandName}
+        </p>
+        <h3 className="mt-1 truncate text-sm font-semibold uppercase tracking-wide text-luneo-black">
+          {product.name}
+        </h3>
+        <div className="mt-1">
+          <Price price={product.price} compareAtPrice={product.compareAtPrice} size="sm" />
+        </div>
       </div>
     </Link>
   );

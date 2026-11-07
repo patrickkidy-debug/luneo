@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="100%" height="100%">
+  <defs>
+    <pattern id="cardHalftone" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1" fill="#e30613" opacity="0.10" />
+    </pattern>
+    <filter id="cShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#0a0a0a" flood-opacity="0.9" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-brand { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 900; }
+    .font-poster { font-family: 'Impact', 'Archivo Black', 'Arial Black', sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Kraft Background -->
+  <rect width="500" height="320" rx="8" fill="#F3E6D2" stroke="#E5E7EB" stroke-width="1" />
+  <rect width="500" height="320" rx="8" fill="url(#cardHalftone)" />
+
+  <!-- Top Right Red Slash -->
+  <path d="M380 0 L500 0 L500 120 Z" fill="#E30613" />
+  <text x="465" y="45" class="font-poster" font-size="11" fill="#FFFFFF" text-anchor="middle" transform="rotate(45 465 45)">DALOA</text>
+
+  <!-- Left Burst Rays -->
+  <g stroke="#E30613" stroke-width="3" stroke-linecap="round">
+    <line x1="25" y1="35" x2="42" y2="24" />
+    <line x1="18" y1="52" x2="38" y2="48" />
+    <line x1="22" y1="68" x2="40" y2="76" />
+  </g>
+
+  <!-- LUNEO Logo Centered/Top -->
+  <g transform="translate(60, 48)">
+    <text x="0" y="42" class="font-brand" font-size="46" fill="#0A0A0A" letter-spacing="1">LUNE</text>
+    <circle cx="140" cy="27" r="16" fill="none" stroke="#E30613" stroke-width="6" />
+    <text x="0" y="65" class="font-body" font-size="9" font-weight="800" fill="#0A0A0A" letter-spacing="2.5">VOTRE REGARD, VOTRE SIGNATURE.</text>
+  </g>
+
+  <!-- Subtitle Tagline Badge -->
+  <g transform="translate(60, 132)">
+    <rect x="0" y="0" width="220" height="26" rx="4" fill="#0A0A0A" />
+    <text x="110" y="18" class="font-brand" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">OPTIQUE MÉDICALE &amp; SOLAIRE</text>
+  </g>
+
+  <!-- Red Accent Divider Line -->
+  <line x1="60" y1="175" x2="440" y2="175" stroke="#E30613" stroke-width="2" />
+
+  <!-- Contact Information Grid -->
+  <g transform="translate(60, 195)">
+    <!-- Phone / WhatsApp -->
+    <g transform="translate(0, 0)">
+      <circle cx="12" cy="12" r="12" fill="#E30613" />
+      <path d="M8 8 C8 12 12 16 16 16 L17 14 C17 14 15 12 14 13 C13 14 11 13 10 11 C9 10 10 8 11 7 C12 6 10 4 10 4 L8 5 Z" fill="#FFFFFF" />
+      <text x="32" y="16" class="font-brand" font-size="13" font-weight="900" fill="#0A0A0A">+225 07 07 07 07 07</text>
+      <text x="32" y="32" class="font-body" font-size="10" font-weight="700" fill="#E30613">Appel &amp; WhatsApp</text>
+    </g>
+
+    <!-- Address / Store -->
+    <g transform="translate(200, 0)">
+      <circle cx="12" cy="12" r="12" fill="#E30613" />
+      <path d="M12 4 C8 4 5 7 5 11 C5 16 12 21 12 21 C12 21 19 16 19 11 C19 7 16 4 12 4 Z M12 13 C10.5 13 9.5 12 9.5 10.5 C9.5 9 10.5 8 12 8 C13.5 8 14.5 9 14.5 10.5 C14.5 12 13.5 13 12 13 Z" fill="#FFFFFF" />
+      <text x="32" y="16" class="font-brand" font-size="12" font-weight="900" fill="#0A0A0A">Avenue de l'Indépendance</text>
+      <text x="32" y="32" class="font-body" font-size="10" font-weight="600" fill="#4B5563">Quartier Commerce, Daloa (près Pharm. Centrale)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Torn Wave Accent -->
+  <path d="M0 295 L40 290 L100 297 L180 288 L260 296 L340 289 L420 297 L500 290 L500 320 L0 320 Z" fill="#E30613" />
+</svg>
+

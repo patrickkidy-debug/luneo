@@ -7,6 +7,7 @@ import { useCart } from "@/context/CartContext";
 import { useFavorites } from "@/context/FavoritesContext";
 import { SearchBar } from "./SearchBar";
 import { MobileDrawer } from "./MobileDrawer";
+import { Logo } from "@/components/brand/Logo";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,18 +26,14 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-40 bg-white transition-shadow duration-200 ${
-        scrolled ? "shadow-md" : ""
-      }`}
-    >
+    <header className="sticky top-0 z-40 px-3 pt-3 sm:px-4">
       <div
-        className={`container-luneo flex items-center justify-between gap-4 transition-[padding] duration-200 ${
-          scrolled ? "py-3" : "py-5"
+        className={`mx-auto flex max-w-[1400px] items-center justify-between gap-4 rounded-full border-2 border-luneo-black/10 bg-luneo-card/95 pl-6 pr-2 backdrop-blur-md transition-[padding,box-shadow] duration-200 ${
+          scrolled ? "py-1.5 shadow-lg" : "py-2.5 shadow-md"
         }`}
       >
-        <Link href="/" className="shrink-0 text-2xl font-extrabold tracking-tight text-luneo-black">
-          LUNE<span className="text-luneo-red">O</span>
+        <Link href="/" aria-label="LUNEO, accueil" className="shrink-0 text-base">
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
@@ -136,7 +133,7 @@ export function Header() {
       </div>
 
       {searchOpen && (
-        <div className="border-t border-luneo-gray-border px-4 py-3 md:hidden">
+        <div className="mx-auto mt-2 rounded-2xl bg-white px-4 py-3 shadow-md md:hidden">
           <SearchBar onSubmit={() => setSearchOpen(false)} />
         </div>
       )}

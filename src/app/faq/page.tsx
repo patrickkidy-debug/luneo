@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "FAQ" };
 const faqs = [
   {
     q: "Quels sont les délais de livraison ?",
-    a: "24 à 72h à Abidjan, 2 à 5 jours ouvrés dans le reste de la Côte d'Ivoire.",
+    a: "24 à 72h à Daloa, 2 à 5 jours ouvrés dans le reste de la Côte d'Ivoire.",
   },
   {
     q: "Puis-je payer à la livraison ?",

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="100%" height="100%">
+  <defs>
+    <pattern id="flyerVersoHalftone" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="1.3" fill="#e30613" opacity="0.12" />
+    </pattern>
+    <filter id="vShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="5" dy="5" stdDeviation="0" flood-color="#0a0a0a" flood-opacity="0.9" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-brand { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 900; }
+    .font-poster { font-family: 'Impact', 'Archivo Black', 'Arial Black', sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Kraft Background -->
+  <rect width="600" height="850" fill="#F3E6D2" />
+  <rect width="600" height="850" fill="url(#flyerVersoHalftone)" />
+
+  <!-- Top Red Jagged Bar -->
+  <path d="M0 0 L600 0 L600 45 L520 38 L420 48 L320 35 L200 45 L100 36 L0 44 Z" fill="#E30613" />
+
+  <!-- Header -->
+  <g transform="translate(40, 65)">
+    <!-- Small Logo on top left -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="28" class="font-brand" font-size="30" fill="#0A0A0A">LUNE</text>
+      <circle cx="94" cy="18" r="10" fill="none" stroke="#E30613" stroke-width="4.5" />
+    </g>
+    <!-- Section Title -->
+    <text x="0" y="65" class="font-poster" font-size="34" fill="#0A0A0A">POURQUOI CHOISIR LUNEO ?</text>
+    <text x="0" y="85" class="font-body" font-size="12" font-weight="700" fill="#E30613" letter-spacing="1">4 ENGAGEMENTS QUI FONT TOUTE LA DIFFÉRENCE</text>
+  </g>
+
+  <!-- 4 Step Engagement Cards -->
+  <g transform="translate(40, 170)">
+    <!-- Step 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="520" height="74" rx="10" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" filter="url(#vShadow)" />
+      <circle cx="38" cy="37" r="24" fill="#E30613" />
+      <text x="38" y="44" class="font-poster" font-size="20" fill="#FFFFFF" text-anchor="middle">1</text>
+      <text x="75" y="30" class="font-brand" font-size="15" font-weight="900" fill="#0A0A0A">BILAN VISUEL GRATUIT &amp; CONSEIL EXPERT</text>
+      <text x="75" y="52" class="font-body" font-size="12" fill="#4B5563">Examen de la vue sur place avec des équipements modernes de haute précision.</text>
+    </g>
+
+    <!-- Step 2 -->
+    <g transform="translate(0, 88)">
+      <rect x="0" y="0" width="520" height="74" rx="10" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" filter="url(#vShadow)" />
+      <circle cx="38" cy="37" r="24" fill="#E30613" />
+      <text x="38" y="44" class="font-poster" font-size="20" fill="#FFFFFF" text-anchor="middle">2</text>
+      <text x="75" y="30" class="font-brand" font-size="15" font-weight="900" fill="#0A0A0A">+150 MONTURES TENDANCES DÈS 12 000 FCFA</text>
+      <text x="75" y="52" class="font-body" font-size="12" fill="#4B5563">Pour ados, femmes et hommes : acétate stylé, titane ultra-léger et lunettes solaires.</text>
+    </g>
+
+    <!-- Step 3 -->
+    <g transform="translate(0, 176)">
+      <rect x="0" y="0" width="520" height="74" rx="10" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" filter="url(#vShadow)" />
+      <circle cx="38" cy="37" r="24" fill="#E30613" />
+      <text x="38" y="44" class="font-poster" font-size="20" fill="#FFFFFF" text-anchor="middle">3</text>
+      <text x="75" y="30" class="font-brand" font-size="15" font-weight="900" fill="#0A0A0A">VERRES HAUTE PRÉCISION CERTIFIÉS</text>
+      <text x="75" y="52" class="font-body" font-size="12" fill="#4B5563">Traitements anti-reflets, anti-rayures, et filtre anti-lumière bleue écran spécial ados.</text>
+    </g>
+
+    <!-- Step 4 -->
+    <g transform="translate(0, 264)">
+      <rect x="0" y="0" width="520" height="74" rx="10" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" filter="url(#vShadow)" />
+      <circle cx="38" cy="37" r="24" fill="#E30613" />
+      <text x="38" y="44" class="font-poster" font-size="20" fill="#FFFFFF" text-anchor="middle">4</text>
+      <text x="75" y="30" class="font-brand" font-size="15" font-weight="900" fill="#0A0A0A">LIVRAISON EN 48H &amp; AJUSTEMENT À VIE</text>
+      <text x="75" y="52" class="font-body" font-size="12" fill="#4B5563">Montage rapide dans notre atelier. Nettoyage et redressage offerts à tout moment.</text>
+    </g>
+  </g>
+
+  <!-- POP ART ACCESS MAP SECTION (Plan d'accès Daloa) -->
+  <g transform="translate(40, 530)">
+    <rect x="0" y="0" width="520" height="185" rx="12" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" filter="url(#vShadow)" />
+    
+    <text x="20" y="28" class="font-brand" font-size="14" font-weight="900" fill="#0A0A0A">COMMENT NOUS TROUVER À DALOA ?</text>
+    
+    <!-- Stylized Map Drawing -->
+    <g transform="translate(20, 42)">
+      <!-- Ground area -->
+      <rect x="0" y="0" width="480" height="120" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
+      
+      <!-- Main Avenue Road (Avenue de l'Indépendance) -->
+      <rect x="0" y="45" width="480" height="32" fill="#E5E7EB" />
+      <line x1="0" y1="61" x2="480" y2="61" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10 8" />
+      <text x="240" y="65" class="font-brand" font-size="11" font-weight="900" fill="#4B5563" text-anchor="middle">AVENUE DE L'INDÉPENDANCE</text>
+
+      <!-- Cross street: Rue du Marché -->
+      <rect x="140" y="0" width="28" height="120" fill="#E5E7EB" />
+
+      <!-- Landmark 1: Pharmacie Centrale -->
+      <rect x="200" y="10" width="115" height="28" rx="4" fill="#10B981" />
+      <text x="257" y="28" class="font-body" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">+ PHARMACIE CENTRALE</text>
+
+      <!-- Boutique LUNEO Box (Highlighted Pop Art) -->
+      <g transform="translate(330, 6)">
+        <rect x="0" y="0" width="140" height="34" rx="6" fill="#E30613" filter="url(#vShadow)" />
+        <text x="70" y="21" class="font-poster" font-size="16" fill="#FFFFFF" text-anchor="middle">★ LUNEO DALOA</text>
+      </g>
+
+      <!-- Location Pin Pulsing -->
+      <g transform="translate(390, 85)">
+        <path d="M12 0 C5.3 0 0 5.3 0 12 C0 21 12 30 12 30 C12 30 24 21 24 12 C24 5.3 18.7 0 12 0 Z" fill="#E30613" />
+        <circle cx="12" cy="11" r="4" fill="#FFFFFF" />
+        <text x="30" y="16" class="font-brand" font-size="11" font-weight="900" fill="#E30613">VOUS ÊTES ICI !</text>
+      </g>
+
+      <!-- Landmark 2: Grand Marché -->
+      <rect x="15" y="86" width="115" height="24" rx="4" fill="#64748B" />
+      <text x="72" y="102" class="font-body" font-size="9" font-weight="800" fill="#FFFFFF" text-anchor="middle">QUARTIER COMMERCE</text>
+    </g>
+  </g>
+
+  <!-- Bottom Strip: Hours, WhatsApp & Legal -->
+  <g transform="translate(0, 745)">
+    <rect x="0" y="0" width="600" height="105" fill="#0A0A0A" />
+    <!-- Jagged top separator -->
+    <path d="M0 0 L80 10 L160 0 L240 10 L320 0 L400 10 L480 0 L560 10 L600 0 L600 4 L0 4 Z" fill="#E30613" />
+
+    <g transform="translate(40, 24)">
+      <!-- Left: Hours -->
+      <text x="0" y="16" class="font-brand" font-size="12" font-weight="900" fill="#FFFFFF">HORAIRES D'OUVERTURE :</text>
+      <text x="0" y="36" class="font-body" font-size="12" fill="#E5E7EB">Lundi au Samedi : 08h00 – 18h30 (non-stop)</text>
+      <text x="0" y="56" class="font-body" font-size="10" font-style="italic" fill="#9CA3AF">
+        * Nos verres optiques nécessitent une prescription médicale.
+      </text>
+
+      <!-- Right: WhatsApp Call-to-action -->
+      <g transform="translate(340, 0)">
+        <rect x="0" y="0" width="180" height="48" rx="24" fill="#25D366" />
+        <text x="90" y="20" class="font-body" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">CONTACT WHATSAPP</text>
+        <text x="90" y="38" class="font-brand" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">+225 07 07 07 07 07</text>
+      </g>
+    </g>
+  </g>
+</svg>
+

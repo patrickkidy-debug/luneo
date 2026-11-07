@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1410" width="100%" height="100%">
+  <defs>
+    <pattern id="kakemonoHalftone" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="1.6" fill="#e30613" opacity="0.12" />
+    </pattern>
+    <pattern id="dotsFine" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="1" fill="#0a0a0a" opacity="0.08" />
+    </pattern>
+    <filter id="kShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="8" dy="8" stdDeviation="0" flood-color="#0a0a0a" flood-opacity="0.9" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-brand { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 900; }
+    .font-poster { font-family: 'Impact', 'Archivo Black', 'Arial Black', sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Kraft Background -->
+  <rect width="600" height="1410" fill="#F3E6D2" />
+  <rect width="600" height="1410" fill="url(#kakemonoHalftone)" />
+  <rect width="600" height="1410" fill="url(#dotsFine)" />
+
+  <!-- Top Red Curved Corner -->
+  <path d="M-20 -20 L240 -20 C180 90 140 140 50 190 C10 210 -20 220 -20 220 Z" fill="#E30613" />
+
+  <!-- Burst rays top right -->
+  <g stroke="#E30613" stroke-width="7" stroke-linecap="round">
+    <line x1="520" y1="60" x2="570" y2="30" />
+    <line x1="540" y1="90" x2="585" y2="85" />
+    <line x1="520" y1="120" x2="570" y2="150" />
+  </g>
+
+  <!-- Giant Logo LUNEO -->
+  <g transform="translate(140, 50)">
+    <text x="0" y="55" class="font-brand" font-size="64" fill="#0A0A0A" letter-spacing="1">LUNE</text>
+    <circle cx="200" cy="35" r="23" fill="none" stroke="#E30613" stroke-width="9" />
+    <text x="0" y="85" class="font-body" font-size="14" font-weight="900" fill="#0A0A0A" letter-spacing="4">VOTRE REGARD, VOTRE SIGNATURE.</text>
+  </g>
+
+  <!-- Explosive Star Sticker: NOUVEAU ! -->
+  <g transform="translate(460, 160) rotate(15)">
+    <polygon points="50,0 65,30 98,20 85,50 115,65 85,80 98,110 65,100 50,130 35,100 2,110 15,80 -15,65 15,50 2,20 35,30" fill="#E30613" filter="url(#kShadow)" />
+    <text x="50" y="62" class="font-poster" font-size="20" fill="#FFFFFF" text-anchor="middle">NOUVEAU</text>
+    <text x="50" y="82" class="font-poster" font-size="16" fill="#FFFFFF" text-anchor="middle">À DALOA</text>
+  </g>
+
+  <!-- Main Headline Block -->
+  <g transform="translate(40, 180)">
+    <text x="0" y="50" class="font-poster" font-size="64" fill="#0A0A0A">LE STYLE</text>
+    <text x="0" y="115" class="font-poster" font-size="64" fill="#0A0A0A">AUSSI POUR</text>
+    <!-- Jagged Torn Red Banner -->
+    <g transform="translate(-10, 135) rotate(-2)">
+      <path d="M0 8 L30 0 L200 6 L380 0 L490 6 L480 78 L380 70 L200 80 L60 72 L0 78 Z" fill="#E30613" filter="url(#kShadow)" />
+      <text x="25" y="56" class="font-poster" font-size="62" fill="#FFFFFF">LES ADOS !</text>
+    </g>
+  </g>
+
+  <!-- Central Visual Poster: Teens Pop Art -->
+  <g transform="translate(50, 440)">
+    <g filter="url(#kShadow)" transform="rotate(1)">
+      <rect x="0" y="0" width="500" height="360" rx="14" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
+      <image href="/images/campagnes/style-ados.webp" x="12" y="12" width="476" height="336" preserveAspectRatio="xMidYMid slice" clip-path="inset(0 round 10px)" />
+    </g>
+  </g>
+
+  <!-- Huge Price Pill -->
+  <g transform="translate(60, 830)">
+    <line x1="0" y1="45" x2="60" y2="45" stroke="#E30613" stroke-width="5" stroke-linecap="round" />
+    <g transform="translate(70, 0)">
+      <rect x="0" y="0" width="340" height="90" rx="45" fill="#FFFFFF" stroke="#E30613" stroke-width="5" filter="url(#kShadow)" />
+      <text x="170" y="32" class="font-brand" font-size="16" font-weight="900" fill="#0A0A0A" text-anchor="middle" letter-spacing="2">À PARTIR DE</text>
+      <text x="170" y="74" class="font-poster" font-size="48" fill="#E30613" text-anchor="middle" letter-spacing="1">12 000 FCFA</text>
+    </g>
+    <line x1="420" y1="45" x2="480" y2="45" stroke="#E30613" stroke-width="5" stroke-linecap="round" />
+  </g>
+
+  <!-- 4 Feature Badges in 2x2 Grid for Kakemono -->
+  <g transform="translate(50, 960)">
+    <!-- Badge 1: Montures modernes -->
+    <g transform="translate(0, 0)">
+      <circle cx="45" cy="45" r="40" fill="#E30613" filter="url(#kShadow)" />
+      <g stroke="#FFFFFF" stroke-width="3" fill="none" transform="translate(25, 28)">
+        <circle cx="9" cy="18" r="8" /><circle cx="31" cy="18" r="8" /><path d="M17 18 L23 18" />
+      </g>
+      <text x="100" y="42" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A">Montures Modernes</text>
+      <text x="100" y="64" class="font-body" font-size="14" fill="#4B5563">+100 modèles ados &amp; adultes</text>
+    </g>
+
+    <!-- Badge 2: Légères & Confortables -->
+    <g transform="translate(280, 0)">
+      <circle cx="45" cy="45" r="40" fill="#E30613" filter="url(#kShadow)" />
+      <g stroke="#FFFFFF" stroke-width="3" fill="none" transform="translate(25, 25)">
+        <path d="M35 5 C20 5 10 15 10 30" /><path d="M35 5 C35 20 25 32 12 32 M8 36 L14 30" />
+      </g>
+      <text x="100" y="42" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A">Légères &amp; Confort</text>
+      <text x="100" y="64" class="font-body" font-size="14" fill="#4B5563">Matériaux haute résistance</text>
+    </g>
+
+    <!-- Badge 3: Contrôle de la vue -->
+    <g transform="translate(0, 110)">
+      <circle cx="45" cy="45" r="40" fill="#E30613" filter="url(#kShadow)" />
+      <g stroke="#FFFFFF" stroke-width="3" fill="none" transform="translate(25, 25)">
+        <path d="M5 20 S12 8 20 8 S35 20 35 20 S28 32 20 32 S5 20 5 20 Z" /><circle cx="20" cy="20" r="5" />
+      </g>
+      <text x="100" y="42" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A">Bilan Visuel Offert</text>
+      <text x="100" y="64" class="font-body" font-size="14" fill="#4B5563">Contrôle gratuit sur place</text>
+    </g>
+
+    <!-- Badge 4: Résistantes au quotidien -->
+    <g transform="translate(280, 110)">
+      <circle cx="45" cy="45" r="40" fill="#E30613" filter="url(#kShadow)" />
+      <g stroke="#FFFFFF" stroke-width="3" fill="none" transform="translate(26, 26)">
+        <path d="M19 4 L6 9 V18 C6 26 11 32 19 36 C27 32 32 26 32 18 V9 L19 4 Z" /><polyline points="13,18 17,22 25,14" />
+      </g>
+      <text x="100" y="42" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A">Garantie &amp; Service</text>
+      <text x="100" y="64" class="font-body" font-size="14" fill="#4B5563">Ajustement à vie offert</text>
+    </g>
+  </g>
+
+  <!-- Big Red Bottom Footer with Arrow -->
+  <g transform="translate(0, 1200)">
+    <path d="M0 35 L70 20 L160 38 L250 18 L350 32 L460 16 L540 30 L600 22 L600 210 L0 210 Z" fill="#E30613" />
+    
+    <g transform="translate(40, 50)">
+      <!-- Location Pin -->
+      <path d="M22 0 C9.8 0 0 9.8 0 22 C0 38.5 22 55 22 55 C22 55 44 38.5 44 22 C44 9.8 34.2 0 22 0 Z" fill="#FFFFFF" />
+      <circle cx="22" cy="20" r="8" fill="#E30613" />
+
+      <text x="60" y="24" class="font-brand" font-size="20" font-style="italic" fill="#FFFFFF">En magasin à</text>
+      <text x="60" y="64" class="font-poster" font-size="52" fill="#FFFFFF">Daloa</text>
+      <text x="60" y="90" class="font-body" font-size="14" font-weight="700" fill="#FFFFFF">
+        Quartier Commerce, Av. de l'Indépendance (près Pharmacie Centrale)
+      </text>
+    </g>
+
+    <!-- Big Directional Callout -->
+    <g transform="translate(410, 48)">
+      <rect x="0" y="0" width="150" height="70" rx="10" fill="#FFFFFF" filter="url(#kShadow)" />
+      <text x="75" y="32" class="font-poster" font-size="20" fill="#E30613" text-anchor="middle">ENTREZ !</text>
+      <text x="75" y="54" class="font-brand" font-size="14" font-weight="900" fill="#0A0A0A" text-anchor="middle">C'EST OUVERT →</text>
+    </g>
+
+    <!-- Medical disclaimer at bottom -->
+    <text x="300" y="180" class="font-body" font-size="11" font-weight="700" font-style="italic" fill="#FFFFFF" text-anchor="middle" opacity="0.9">
+      Nos verres correcteurs nécessitent une prescription médicale.
+    </text>
+  </g>
+</svg>
+

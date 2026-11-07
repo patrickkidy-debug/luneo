@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Archivo } from "next/font/google";
 import { AppProviders } from "@/components/providers/AppProviders";
 import { Header } from "@/components/layout/Header";
 import { TopBar } from "@/components/layout/TopBar";
@@ -12,6 +12,14 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+// Poster headline face: heavy, condensed, italic
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  axes: ["wdth"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -19,7 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "LUNEO, enseigne d'optique moderne en Côte d'Ivoire. Lunettes de vue, lunettes de soleil, verres correcteurs et accessoires.",
+    "LUNEO, opticien à Daloa (Côte d'Ivoire). Lunettes de vue, lunettes de soleil, verres correcteurs et accessoires.",
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -29,10 +37,16 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "Optician",
   name: siteConfig.name,
   url: siteConfig.url,
   slogan: siteConfig.tagline,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: `${siteConfig.store.street}, ${siteConfig.store.district}`,
+    addressLocality: siteConfig.store.city,
+    addressCountry: "CI",
+  },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: siteConfig.phoneDisplay,
@@ -44,7 +58,7 @@ const organizationJsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="fr" className={`${inter.variable} h-full antialiased`}>
+    <html lang="fr" className={`${inter.variable} ${archivo.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-white text-luneo-black">
         <script
           type="application/ld+json"

@@ -3,9 +3,12 @@ import { CategoryGrid } from "@/components/home/CategoryGrid";
 import { BestSellers } from "@/components/home/BestSellers";
 import { ServicesTeaser } from "@/components/home/ServicesTeaser";
 import { BrandsSection } from "@/components/home/BrandsSection";
+import { Editorial } from "@/components/home/Editorial";
+import { Campaigns } from "@/components/home/Campaigns";
 import { PromoBanner } from "@/components/home/PromoBanner";
 import { AccessoriesTeaser } from "@/components/home/AccessoriesTeaser";
 import { AboutTeaser } from "@/components/home/AboutTeaser";
+import { StoreBand } from "@/components/brand/StoreBand";
 import {
   getCategories,
   getFeaturedProducts,
@@ -18,7 +21,7 @@ export const revalidate = 60;
 export default async function HomePage() {
   const [categories, featuredProducts, brands, accessories] = await Promise.all([
     getCategories(),
-    getFeaturedProducts(5),
+    getFeaturedProducts(4),
     getBrands(),
     getProducts({ categorySlug: "accessoires" }),
   ]);
@@ -26,12 +29,15 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <CategoryGrid categories={categories} />
+      <StoreBand />
       <BestSellers products={featuredProducts} />
+      <Campaigns />
+      <Editorial categories={categories} />
+      <BrandsSection brands={brands} />
+      <CategoryGrid categories={categories} />
       <ServicesTeaser />
       <PromoBanner />
       <AccessoriesTeaser products={accessories.slice(0, 4)} />
-      <BrandsSection brands={brands} />
       <AboutTeaser />
     </>
   );

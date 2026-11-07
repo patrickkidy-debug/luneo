@@ -8,8 +8,8 @@ export default function LivraisonPage() {
       <h1 className="text-2xl font-bold text-luneo-black sm:text-3xl">Livraison</h1>
       <div className="mt-6 space-y-4 text-sm leading-relaxed text-black/70">
         <p>
-          LUNEO livre à Abidjan et dans les principales villes de Côte d&apos;Ivoire.
-          Les délais moyens sont de 24 à 72h à Abidjan et de 2 à 5 jours ouvrés à
+          LUNEO livre à Daloa et dans les principales villes de Côte d&apos;Ivoire.
+          Les délais moyens sont de 24 à 72h à Daloa et de 2 à 5 jours ouvrés à
           l&apos;intérieur du pays, selon la disponibilité du produit.
         </p>
         <p>

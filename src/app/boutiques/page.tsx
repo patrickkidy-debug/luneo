@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Nos boutiques",
-  description: "Retrouvez les boutiques LUNEO à Abidjan : adresses, horaires et contacts.",
+  description: `Retrouvez la boutique LUNEO à ${siteConfig.store.city} : adresse, horaires et contact.`,
 };
 
 export const revalidate = 60;
@@ -34,9 +34,12 @@ export default async function StoresPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <h1 className="text-2xl font-bold text-luneo-black sm:text-3xl">Nos boutiques</h1>
-      <p className="mt-2 max-w-xl text-sm text-black/60">
-        Retrouvez-nous à Abidjan pour un accompagnement personnalisé et un essayage en boutique.
+      <h1 className="font-poster text-5xl text-luneo-black sm:text-6xl">
+        En magasin à <span className="torn-highlight">{siteConfig.store.city}</span>
+      </h1>
+      <p className="mt-4 max-w-xl text-sm text-black/70">
+        Retrouvez-nous à {siteConfig.store.city} pour un accompagnement personnalisé et un
+        essayage en boutique. Nos verres nécessitent une prescription médicale.
       </p>
 
       {stores.length === 0 ? (

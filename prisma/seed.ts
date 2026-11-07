@@ -409,31 +409,13 @@ async function main() {
   await prisma.store.createMany({
     data: [
       {
-        name: "LUNEO Cocody",
-        slug: "luneo-cocody",
-        address: "Rue des Jardins, Cocody",
-        city: "Abidjan",
+        name: "LUNEO Daloa",
+        slug: "luneo-daloa",
+        address: "Avenue de l'Indépendance, Quartier Commerce (à côté de la Pharmacie Centrale)",
+        city: "Daloa",
         phone: "+225 07 07 07 07 07",
         hours: "Lun-Sam 9h-19h",
-        mapUrl: "https://maps.google.com/?q=Cocody+Abidjan",
-      },
-      {
-        name: "LUNEO Plateau",
-        slug: "luneo-plateau",
-        address: "Avenue Chardy, Plateau",
-        city: "Abidjan",
-        phone: "+225 07 07 07 07 08",
-        hours: "Lun-Sam 8h30-18h30",
-        mapUrl: "https://maps.google.com/?q=Plateau+Abidjan",
-      },
-      {
-        name: "LUNEO Marcory",
-        slug: "luneo-marcory",
-        address: "Boulevard VGE, Marcory",
-        city: "Abidjan",
-        phone: "+225 07 07 07 07 09",
-        hours: "Lun-Sam 9h-19h",
-        mapUrl: "https://maps.google.com/?q=Marcory+Abidjan",
+        mapUrl: "https://maps.google.com/?q=Avenue+de+l'Ind%C3%A9pendance+Quartier+Commerce+Daloa",
       },
     ],
   });

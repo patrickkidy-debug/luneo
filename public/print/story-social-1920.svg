@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="100%" height="100%">
+  <defs>
+    <pattern id="storyHalftone" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="2" fill="#e30613" opacity="0.12" />
+    </pattern>
+    <filter id="sShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="12" dy="12" stdDeviation="0" flood-color="#0a0a0a" flood-opacity="0.9" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-brand { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 900; }
+    .font-poster { font-family: 'Impact', 'Archivo Black', 'Arial Black', sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Kraft Background -->
+  <rect width="1080" height="1920" fill="#F3E6D2" />
+  <rect width="1080" height="1920" fill="url(#storyHalftone)" />
+
+  <!-- Top Red Pop Wave -->
+  <path d="M-20 -20 L380 -20 C280 140 200 220 80 320 C20 350 -20 360 -20 360 Z" fill="#E30613" />
+
+  <!-- Burst Rays -->
+  <g stroke="#E30613" stroke-width="9" stroke-linecap="round">
+    <line x1="920" y1="120" x2="1000" y2="70" />
+    <line x1="950" y1="170" x2="1025" y2="160" />
+    <line x1="910" y1="220" x2="980" y2="270" />
+  </g>
+
+  <!-- LUNEO Logo -->
+  <g transform="translate(240, 100)">
+    <text x="0" y="70" class="font-brand" font-size="80" fill="#0A0A0A" letter-spacing="1">LUNE</text>
+    <circle cx="250" cy="45" r="28" fill="none" stroke="#E30613" stroke-width="11" />
+    <text x="0" y="108" class="font-body" font-size="16" font-weight="900" fill="#0A0A0A" letter-spacing="5">VOTRE REGARD, VOTRE SIGNATURE.</text>
+  </g>
+
+  <!-- Headline -->
+  <g transform="translate(80, 260)">
+    <text x="0" y="70" class="font-poster" font-size="84" fill="#0A0A0A">LE STYLE</text>
+    <text x="0" y="160" class="font-poster" font-size="84" fill="#0A0A0A">AUSSI POUR</text>
+    <g transform="translate(-15, 190) rotate(-2)">
+      <path d="M0 12 L40 0 L320 8 L600 0 L740 8 L720 110 L540 100 L260 112 L80 102 L0 110 Z" fill="#E30613" filter="url(#sShadow)" />
+      <text x="35" y="80" class="font-poster" font-size="88" fill="#FFFFFF">LES ADOS !</text>
+    </g>
+  </g>
+
+  <!-- Central Visual Collage Frame -->
+  <g transform="translate(90, 620)">
+    <g filter="url(#sShadow)" transform="rotate(1.5)">
+      <rect x="0" y="0" width="900" height="650" rx="20" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="6" />
+      <image href="/images/campagnes/style-ados.webp" x="16" y="16" width="868" height="618" preserveAspectRatio="xMidYMid slice" clip-path="inset(0 round 12px)" />
+    </g>
+  </g>
+
+  <!-- Large Price Pill -->
+  <g transform="translate(180, 1340)">
+    <line x1="0" y1="55" x2="60" y2="55" stroke="#E30613" stroke-width="6" stroke-linecap="round" />
+    <g transform="translate(75, 0)">
+      <rect x="0" y="0" width="450" height="110" rx="55" fill="#FFFFFF" stroke="#E30613" stroke-width="6" filter="url(#sShadow)" />
+      <text x="225" y="40" class="font-brand" font-size="20" font-weight="900" fill="#0A0A0A" text-anchor="middle" letter-spacing="2">À PARTIR DE</text>
+      <text x="225" y="90" class="font-poster" font-size="58" fill="#E30613" text-anchor="middle">12 000 FCFA</text>
+    </g>
+    <line x1="540" y1="55" x2="600" y2="55" stroke="#E30613" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- 3 Circular Badges in Story -->
+  <g transform="translate(120, 1500)">
+    <g transform="translate(0, 0)">
+      <circle cx="50" cy="50" r="45" fill="#E30613" filter="url(#sShadow)" />
+      <g stroke="#FFFFFF" stroke-width="4" fill="none" transform="translate(28, 30)">
+        <circle cx="10" cy="20" r="9" /><circle cx="35" cy="20" r="9" /><line x1="19" y1="20" x2="26" y2="20" />
+      </g>
+      <text x="50" y="120" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A" text-anchor="middle">Montures</text>
+      <text x="50" y="142" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A" text-anchor="middle">modernes</text>
+    </g>
+
+    <g transform="translate(290, 0)">
+      <circle cx="50" cy="50" r="45" fill="#E30613" filter="url(#sShadow)" />
+      <g stroke="#FFFFFF" stroke-width="4" fill="none" transform="translate(28, 28)">
+        <path d="M38 5 C22 5 11 16 11 32 M38 5 C38 22 27 34 14 34 M9 37 L16 30" />
+      </g>
+      <text x="50" y="120" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A" text-anchor="middle">Légères &amp;</text>
+      <text x="50" y="142" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A" text-anchor="middle">confortables</text>
+    </g>
+
+    <g transform="translate(580, 0)">
+      <circle cx="50" cy="50" r="45" fill="#E30613" filter="url(#sShadow)" />
+      <g stroke="#FFFFFF" stroke-width="4" fill="none" transform="translate(29, 29)">
+        <path d="M21 4 L7 10 V20 C7 29 12 35 21 40 C30 35 35 29 35 20 V10 L21 4 Z" /><polyline points="14,20 19,25 28,15" />
+      </g>
+      <text x="50" y="120" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A" text-anchor="middle">Résistantes</text>
+      <text x="50" y="142" class="font-brand" font-size="18" font-weight="900" fill="#0A0A0A" text-anchor="middle">au quotidien</text>
+    </g>
+  </g>
+
+  <!-- Big Red Bottom Wave with Swipe-up/Call-to-Action -->
+  <g transform="translate(0, 1690)">
+    <path d="M0 45 L120 25 L280 48 L440 22 L620 42 L800 20 L960 40 L1080 28 L1080 230 L0 230 Z" fill="#E30613" />
+    
+    <g transform="translate(80, 60)">
+      <!-- Location Pin -->
+      <path d="M28 0 C12.5 0 0 12.5 0 28 C0 49 28 70 28 70 C28 70 56 49 56 28 C56 12.5 43.5 0 28 0 Z" fill="#FFFFFF" />
+      <circle cx="28" cy="26" r="10" fill="#E30613" />
+
+      <text x="75" y="30" class="font-brand" font-size="24" font-style="italic" fill="#FFFFFF">En magasin à</text>
+      <text x="75" y="78" class="font-poster" font-size="64" fill="#FFFFFF">Daloa</text>
+      <text x="320" y="50" class="font-body" font-size="20" font-weight="700" fill="#FFFFFF">
+        Quartier Commerce, Av. de l'Indépendance
+      </text>
+      <text x="320" y="80" class="font-body" font-size="18" fill="#FFFFFF" opacity="0.95">
+        (à côté de la Pharmacie Centrale) • WhatsApp: 07 07 07 07 07
+      </text>
+    </g>
+
+    <text x="540" y="195" class="font-body" font-size="15" font-weight="700" font-style="italic" fill="#FFFFFF" text-anchor="middle">
+      Nos verres nécessitent une prescription médicale.
+    </text>
+  </g>
+</svg>
+

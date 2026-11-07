@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1150" width="100%" height="100%">
+  <defs>
+    <!-- Halftone Dot Pattern -->
+    <pattern id="halftone" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1.5" fill="#e30613" opacity="0.12" />
+    </pattern>
+    <pattern id="dotsDark" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="1.2" fill="#0a0a0a" opacity="0.08" />
+    </pattern>
+
+    <!-- Drop Shadows -->
+    <filter id="popShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="8" dy="8" stdDeviation="0" flood-color="#0a0a0a" flood-opacity="0.9" />
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="frameShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-brand { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 900; }
+    .font-poster { font-family: 'Impact', 'Archivo Black', 'Arial Black', sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Background Base: Warm Poster Kraft Paper -->
+  <rect width="800" height="1150" fill="#F3E6D2" />
+  <rect width="800" height="1150" fill="url(#halftone)" />
+  <rect width="800" height="1150" fill="url(#dotsDark)" />
+
+  <!-- Top Left Graphic Red Corner Wave -->
+  <path d="M-20 -20 L260 -20 C220 80 180 140 80 200 C30 230 -20 240 -20 240 Z" fill="#E30613" />
+  <path d="M-20 235 C30 235 75 225 115 195" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" />
+
+  <!-- Top Right Burst Lines -->
+  <g stroke="#E30613" stroke-width="6" stroke-linecap="round" opacity="0.9">
+    <line x1="720" y1="50" x2="760" y2="25" />
+    <line x1="735" y1="75" x2="780" y2="70" />
+    <line x1="715" y1="95" x2="760" y2="120" />
+  </g>
+
+  <!-- LUNEO Header Logo -->
+  <g transform="translate(180, 50)">
+    <text x="0" y="46" class="font-brand" font-size="52" fill="#0A0A0A" letter-spacing="1">LUNE</text>
+    <circle cx="160" cy="30" r="18" fill="none" stroke="#E30613" stroke-width="7" />
+    <text x="0" y="70" class="font-body" font-size="12" font-weight="800" fill="#0A0A0A" letter-spacing="4">VOTRE REGARD, VOTRE SIGNATURE.</text>
+  </g>
+
+  <!-- Red Burst Accents around Title -->
+  <g stroke="#E30613" stroke-width="6" stroke-linecap="round">
+    <line x1="70" y1="210" x2="95" y2="185" />
+    <line x1="55" y1="230" x2="80" y2="225" />
+    <line x1="65" y1="250" x2="90" y2="260" />
+  </g>
+
+  <!-- Headline: LE STYLE AUSSI POUR LES ADOS & TOUTE LA FAMILLE -->
+  <text x="80" y="240" class="font-poster" font-size="64" fill="#0A0A0A" letter-spacing="-1">GRAND LANCEMENT !</text>
+  <text x="80" y="305" class="font-poster" font-size="68" fill="#0A0A0A" letter-spacing="-1">LE STYLE AUSSI POUR</text>
+
+  <!-- Torn Red Highlight Strip: "LES ADOS !" / "OUVERTURE !" -->
+  <g transform="translate(60, 325) rotate(-2)">
+    <path d="M0 8 L30 0 L180 6 L320 0 L460 5 L450 65 L360 60 L200 68 L60 62 L0 68 Z" fill="#E30613" filter="url(#popShadow)" />
+    <text x="25" y="48" class="font-poster" font-size="54" fill="#FFFFFF" letter-spacing="1">LES ADOS &amp; ADULTES !</text>
+  </g>
+
+  <!-- Visual: Photo Poster of Teens Wearing Glasses -->
+  <g transform="translate(380, 240)">
+    <!-- White Polaroid / Collage Frame with Hard Shadow -->
+    <g filter="url(#popShadow)" transform="rotate(2)">
+      <rect x="0" y="0" width="370" height="470" rx="12" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" />
+      <!-- Photo Container -->
+      <image href="/images/campagnes/style-ados.webp" x="10" y="10" width="350" height="450" preserveAspectRatio="xMidYMid slice" clip-path="inset(0 round 8px)" />
+    </g>
+    <!-- Badge "NOUVEAU" on photo -->
+    <g transform="translate(260, 20) rotate(12)">
+      <polygon points="40,0 52,24 78,16 68,40 92,52 68,64 78,88 52,80 40,104 28,80 2,88 12,64 -12,52 12,40 2,16 28,24" fill="#E30613" />
+      <text x="40" y="58" class="font-poster" font-size="16" fill="#FFFFFF" text-anchor="middle">NOUVEAU</text>
+    </g>
+  </g>
+
+  <!-- Left Side: Cutout White Modern Glasses -->
+  <g transform="translate(50, 440)">
+    <!-- Frame Illustration in Pop Art Cutout -->
+    <g filter="url(#frameShadow)">
+      <!-- Eyeglass Rim Left -->
+      <path d="M20 50 C25 20 80 15 130 30 C150 35 155 75 145 95 C135 115 40 120 25 90 Z" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="6" />
+      <path d="M35 52 C40 32 80 28 120 40 C135 45 138 75 130 90 C120 102 50 105 38 82 Z" fill="#F8FAFC" fill-opacity="0.85" stroke="#E5E7EB" stroke-width="3" />
+      
+      <!-- Bridge -->
+      <path d="M142 45 C155 38 175 38 188 45 C185 55 145 55 142 45 Z" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="4" />
+      
+      <!-- Eyeglass Rim Right -->
+      <path d="M190 45 C200 35 250 20 295 30 C310 35 315 75 305 95 C295 115 200 120 185 90 Z" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="6" />
+      <path d="M205 52 C210 32 250 28 290 40 C300 45 302 75 295 90 C285 102 215 105 203 82 Z" fill="#F8FAFC" fill-opacity="0.85" stroke="#E5E7EB" stroke-width="3" />
+      
+      <!-- Temples / Branches -->
+      <path d="M22 45 C15 35 5 45 0 65" stroke="#E5E7EB" stroke-width="8" stroke-linecap="round" fill="none" />
+      <path d="M308 45 C315 35 325 45 330 65" stroke="#E5E7EB" stroke-width="8" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+
+  <!-- Price Pill Capsule: À PARTIR DE 12 000 FCFA -->
+  <g transform="translate(60, 580)">
+    <line x1="0" y1="36" x2="40" y2="36" stroke="#E30613" stroke-width="4" stroke-linecap="round" />
+    <!-- White Capsule Pill with Red Border -->
+    <g transform="translate(48, 0)">
+      <rect x="0" y="0" width="220" height="72" rx="36" fill="#FFFFFF" stroke="#E30613" stroke-width="4" filter="url(#popShadow)" />
+      <text x="110" y="26" class="font-brand" font-size="12" font-weight="900" fill="#0A0A0A" text-anchor="middle" letter-spacing="1">À PARTIR DE</text>
+      <text x="110" y="58" class="font-poster" font-size="34" fill="#E30613" text-anchor="middle" letter-spacing="1">12 000 FCFA</text>
+    </g>
+    <line x1="276" y1="36" x2="316" y2="36" stroke="#E30613" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <!-- 3 Circular Pop Art Feature Badges -->
+  <g transform="translate(60, 690)">
+    <!-- Badge 1: Montures modernes -->
+    <g transform="translate(0, 0)">
+      <circle cx="45" cy="45" r="38" fill="#E30613" filter="url(#popShadow)" />
+      <!-- Glasses Icon White -->
+      <g stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(25, 28)">
+        <circle cx="9" cy="18" r="8" />
+        <circle cx="31" cy="18" r="8" />
+        <path d="M17 18 L23 18" />
+        <path d="M2 17 L0 10" />
+        <path d="M38 17 L40 10" />
+      </g>
+      <text x="45" y="106" class="font-brand" font-size="14" font-weight="900" fill="#0A0A0A" text-anchor="middle">Montures</text>
+      <text x="45" y="124" class="font-brand" font-size="14" font-weight="900" fill="#0A0A0A" text-anchor="middle">modernes</text>
+    </g>
+
+    <!-- Badge 2: Légères & Confortables -->
+    <g transform="translate(130, 0)">
+      <circle cx="45" cy="45" r="38" fill="#E30613" filter="url(#popShadow)" />
+      <!-- Feather Icon White -->
+      <g stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(25, 25)">
+        <path d="M35 5 C20 5 10 15 10 30" />
+        <path d="M35 5 C35 20 25 32 12 32 M8 36 L14 30" />
+        <line x1="12" y1="32" x2="30" y2="14" />
+      </g>
+      <text x="45" y="106" class="font-brand" font-size="14" font-weight="900" fill="#0A0A0A" text-anchor="middle">Légères et</text>
+      <text x="45" y="124" class="font-brand" font-size="14" font-weight="900" fill="#0A0A0A" text-anchor="middle">confortables</text>
+    </g>
+
+    <!-- Badge 3: Résistantes au quotidien -->
+    <g transform="translate(260, 0)">
+      <circle cx="45" cy="45" r="38" fill="#E30613" filter="url(#popShadow)" />
+      <!-- Shield Check Icon White -->
+      <g stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(26, 26)">
+        <path d="M19 4 L6 9 V18 C6 26 11 32 19 36 C27 32 32 26 32 18 V9 L19 4 Z" />
+        <polyline points="13,18 17,22 25,14" />
+      </g>
+      <text x="45" y="106" class="font-brand" font-size="14" font-weight="900" fill="#0A0A0A" text-anchor="middle">Résistantes</text>
+      <text x="45" y="124" class="font-brand" font-size="14" font-weight="900" fill="#0A0A0A" text-anchor="middle">au quotidien</text>
+    </g>
+  </g>
+
+  <!-- Big Launch Special Offer Box -->
+  <g transform="translate(60, 850)">
+    <rect x="0" y="0" width="680" height="96" rx="16" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" filter="url(#popShadow)" />
+    <!-- Red ribbon tag -->
+    <path d="M0 16 C0 7 7 0 16 0 L180 0 L160 96 L0 96 Z" fill="#E30613" />
+    <text x="80" y="42" class="font-poster" font-size="22" fill="#FFFFFF" text-anchor="middle">OFFRE SPÉCIALE</text>
+    <text x="80" y="70" class="font-poster" font-size="28" fill="#FFFFFF" text-anchor="middle">OUVERTURE</text>
+    
+    <!-- Offer Description -->
+    <text x="200" y="40" class="font-brand" font-size="20" font-weight="900" fill="#0A0A0A">BILAN DE LA VUE GRATUIT EN MAGASIN</text>
+    <text x="200" y="70" class="font-body" font-size="16" font-weight="700" fill="#E30613">+ UN ÉTUI RIGIDE OFFERT POUR TOUT ACHAT !</text>
+    
+    <!-- Phone / WhatsApp contact badge on right -->
+    <g transform="translate(530, 20)">
+      <rect x="0" y="0" width="130" height="56" rx="28" fill="#25D366" />
+      <text x="65" y="24" class="font-body" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">INFO &amp; RDV</text>
+      <text x="65" y="42" class="font-brand" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle">07 07 07 07 07</text>
+    </g>
+  </g>
+
+  <!-- Bottom Torn Dynamic Red Wave Footer -->
+  <g transform="translate(0, 970)">
+    <!-- Jagged Torn Top Edge -->
+    <path d="M0 30 L60 18 L140 32 L220 16 L310 28 L400 14 L490 26 L580 15 L670 28 L740 18 L800 24 L800 180 L0 180 Z" fill="#E30613" />
+    
+    <!-- Left Store Location Info -->
+    <g transform="translate(40, 50)">
+      <!-- Location Pin Icon White -->
+      <g transform="translate(0, 0)">
+        <path d="M22 0 C9.8 0 0 9.8 0 22 C0 38.5 22 55 22 55 C22 55 44 38.5 44 22 C44 9.8 34.2 0 22 0 Z" fill="#FFFFFF" />
+        <circle cx="22" cy="20" r="8" fill="#E30613" />
+      </g>
+      <text x="60" y="22" class="font-brand" font-size="18" font-style="italic" font-weight="700" fill="#FFFFFF">En magasin à</text>
+      <text x="60" y="58" class="font-poster" font-size="46" fill="#FFFFFF" letter-spacing="1">Daloa</text>
+      <text x="60" y="80" class="font-body" font-size="13" font-weight="600" fill="#FFFFFF" opacity="0.95">
+        Quartier Commerce, Av. de l'Indépendance (à côté de la Pharmacie Centrale)
+      </text>
+    </g>
+
+    <!-- Vertical White Divider -->
+    <line x1="560" y1="50" x2="560" y2="135" stroke="#FFFFFF" stroke-width="2" opacity="0.4" />
+
+    <!-- Right Medical Prescription Note -->
+    <g transform="translate(585, 52)">
+      <!-- Prescription Doc Icon -->
+      <g stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0, 5)">
+        <path d="M18 3 H6 A2 2 0 0 0 4 5 V25 A2 2 0 0 0 6 27 H18 A2 2 0 0 0 20 25 V5 A2 2 0 0 0 18 3 Z" />
+        <path d="M8 8 H14 M8 13 H16 M8 18 H12" />
+        <circle cx="22" cy="23" r="5" fill="#E30613" stroke="#FFFFFF" stroke-width="2" />
+        <line x1="22" y1="20" x2="22" y2="26" stroke="#FFFFFF" stroke-width="2" />
+        <line x1="19" y1="23" x2="25" y2="23" stroke="#FFFFFF" stroke-width="2" />
+      </g>
+      <text x="38" y="24" class="font-body" font-size="14" font-weight="800" font-style="italic" fill="#FFFFFF">Nos verres nécessitent</text>
+      <text x="38" y="44" class="font-body" font-size="14" font-weight="800" font-style="italic" fill="#FFFFFF">une prescription</text>
+      <text x="38" y="64" class="font-body" font-size="14" font-weight="800" font-style="italic" fill="#FFFFFF">médicale.</text>
+    </g>
+  </g>
+</svg>
+

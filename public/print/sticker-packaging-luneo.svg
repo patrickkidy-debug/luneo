@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <pattern id="stickHalftone" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="0.9" fill="#e30613" opacity="0.12" />
+    </pattern>
+    <filter id="stShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#0a0a0a" flood-opacity="0.8" />
+    </filter>
+    <!-- Curved Paths for Text -->
+    <path id="textCircleTop" d="M 60 200 A 140 140 0 1 1 340 200" fill="none" />
+    <path id="textCircleBottom" d="M 340 200 A 140 140 0 1 1 60 200" fill="none" />
+  </defs>
+
+  <style>
+    .font-brand { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 900; }
+    .font-poster { font-family: 'Impact', 'Archivo Black', 'Arial Black', sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Outer Serrated Pop-Art Seal (Star / Badge points) -->
+  <g transform="translate(200, 200)" filter="url(#stShadow)">
+    <circle cx="0" cy="0" r="190" fill="#E30613" />
+    <!-- White Inner Border -->
+    <circle cx="0" cy="0" r="178" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="10 6" />
+    <!-- Cream Inner Disc -->
+    <circle cx="0" cy="0" r="165" fill="#F3E6D2" stroke="#0A0A0A" stroke-width="3" />
+    <circle cx="0" cy="0" r="165" fill="url(#stickHalftone)" />
+  </g>
+
+  <!-- Circular Rotating Text Around Rim -->
+  <text font-family="'Inter', sans-serif" font-size="12" font-weight="900" fill="#0A0A0A" letter-spacing="3.5">
+    <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+      ★ LUNEO DALOA • ÉDITION OUVERTURE ★
+    </textPath>
+  </text>
+  <text font-family="'Inter', sans-serif" font-size="10.5" font-weight="900" fill="#E30613" letter-spacing="3">
+    <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+      VOTRE REGARD, VOTRE SIGNATURE •
+    </textPath>
+  </text>
+
+  <!-- Central Graphic Area -->
+  <g transform="translate(200, 160)">
+    <!-- Logo LUNEO -->
+    <text x="-48" y="10" class="font-brand" font-size="34" fill="#0A0A0A" letter-spacing="1">LUNE</text>
+    <circle cx="56" cy="-1" r="12" fill="none" stroke="#E30613" stroke-width="5" />
+
+    <!-- Eyeglasses Illustration -->
+    <g transform="translate(-85, 30)">
+      <!-- Frame Left -->
+      <path d="M10 20 C14 8 40 6 62 13 C72 15 74 34 68 42 C62 50 18 52 13 40 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" />
+      <path d="M16 21 C18 13 38 10 56 16 C63 18 64 32 60 38 C55 44 22 45 17 36 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" />
+      <!-- Bridge -->
+      <path d="M68 20 C74 17 84 17 90 20 C88 24 70 24 68 20 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" />
+      <!-- Frame Right -->
+      <path d="M96 20 C102 15 128 6 150 13 C160 15 162 34 156 42 C150 50 106 52 101 40 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" />
+      <path d="M102 21 C106 13 126 10 144 16 C151 18 152 32 148 38 C143 44 110 45 105 36 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" />
+    </g>
+
+    <!-- Bottom Ribbon in Disc -->
+    <g transform="translate(0, 105)">
+      <rect x="-80" y="0" width="160" height="26" rx="13" fill="#E30613" filter="url(#stShadow)" />
+      <text x="0" y="17" class="font-poster" font-size="14" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">DÈS 12 000 FCFA</text>
+    </g>
+  </g>
+</svg>
+

@@ -6,6 +6,7 @@ function photo(id: string, width = 800, quality = 75) {
 
 export const images = {
   heroLifestyle: photo("photo-1760552069014-78ff72ee7cac", 1200),
+  heroWide: photo("photo-1760552069014-78ff72ee7cac", 2400, 80),
   storeInterior: photo("photo-1759910546804-68fd991aceac", 1200),
   eyeExam: photo("photo-1639945314222-60223e6cd32b", 1200),
   framesDisplay: photo("photo-1732674041928-925bb72c14f0", 1600),

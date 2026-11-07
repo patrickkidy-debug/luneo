@@ -17,7 +17,7 @@ export function Price({
 
   return (
     <span className="inline-flex items-baseline gap-2">
-      <span className={`font-bold text-luneo-black ${sizeClasses}`}>
+      <span className={`font-extrabold italic text-luneo-red ${sizeClasses}`}>
         {formatPrice(price)}
       </span>
       {compareAtPrice && compareAtPrice > price && (

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f3e6d2;
   --foreground: #0a0a0a;
 
   --color-luneo-red: #e30613;
@@ -10,6 +10,10 @@
   --color-luneo-white: #ffffff;
   --color-luneo-gray: #f7f7f7;
   --color-luneo-gray-border: #e8e8e8;
+  /* Poster paper: warm beige ground and a deeper tone for alternating sections */
+  --color-luneo-paper: #f3e6d2;
+  --color-luneo-paper-deep: #ead6b9;
+  --color-luneo-card: #fffaf2;
 }
 
 @theme inline {
@@ -22,12 +26,18 @@
   --color-luneo-white: var(--color-luneo-white);
   --color-luneo-gray: var(--color-luneo-gray);
   --color-luneo-gray-border: var(--color-luneo-gray-border);
+  --color-luneo-paper: var(--color-luneo-paper);
+  --color-luneo-paper-deep: var(--color-luneo-paper-deep);
+  --color-luneo-card: var(--color-luneo-card);
 
   --font-sans: var(--font-inter);
+  --font-display: var(--font-archivo);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  /* Fine paper grain, as on the printed posters */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .32 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
@@ -65,5 +75,32 @@ body {
     .container-luneo {
       padding-inline: 2rem;
     }
+  }
+
+  /* Poster headline: heavy condensed italic capitals */
+  .font-poster {
+    font-family: var(--font-display), Impact, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-stretch: 72%;
+    text-transform: uppercase;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+  }
+
+  /* White words on a torn red paper strip */
+  .torn-highlight {
+    display: inline-block;
+    background: var(--color-luneo-red);
+    color: #fff;
+    padding: 0.08em 0.32em 0.12em;
+    transform: rotate(-2deg);
+    clip-path: polygon(1.5% 6%, 22% 0, 48% 5%, 74% 0, 100% 4%, 98.5% 34%, 100% 62%, 98% 100%, 70% 95%, 44% 100%, 18% 94%, 0 100%, 1.8% 66%, 0 34%);
+  }
+
+  /* Collage cut-out: white paper border with a red offset */
+  .collage-frame {
+    border: 8px solid #fff;
+    box-shadow: 12px 12px 0 var(--color-luneo-red), 0 18px 40px rgb(0 0 0 / 0.18);
   }
 }

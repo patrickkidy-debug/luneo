@@ -6,9 +6,9 @@ export function AccessoriesTeaser({ products }: { products: ProductCardData[] })
   if (products.length === 0) return null;
 
   return (
-    <section className="bg-white py-16">
+    <section className="py-16">
       <div className="container-luneo">
-        <SectionTitle eyebrow="Essentiels" title="Les essentiels LUNEO" />
+        <SectionTitle eyebrow="Essentiels" title="Les essentiels" highlight="LUNEO" />
         <div className="mt-10">
           <ProductGrid products={products} />
         </div>

@@ -1,34 +1,29 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { images } from "@/lib/images";
+import { TornEdge } from "@/components/brand/TornEdge";
+import { Logo } from "@/components/brand/Logo";
 
 export function PromoBanner() {
   return (
-    <section className="relative overflow-hidden bg-luneo-black">
-      <div className="absolute inset-0">
-        <Image
-          src={images.framesDisplay}
-          alt="Monture LUNEO"
-          fill
-          sizes="100vw"
-          className="object-cover opacity-40"
-        />
-      </div>
-      <div className="container-luneo relative py-20 text-center text-white">
-        <p className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-          LUNE<span className="text-luneo-red">O</span>
-        </p>
-        <p className="mx-auto mt-4 max-w-lg text-xl font-semibold sm:text-2xl">
-          Votre regard,
-          <br />
-          votre signature.
-        </p>
-        <div className="mt-8">
-          <Button href="/lunettes-de-vue" size="lg">
-            Découvrir nos nouveautés →
-          </Button>
+    <section className="text-luneo-red">
+      <TornEdge seed={19} />
+      <div className="bg-luneo-red">
+        <div className="container-luneo flex flex-col items-center py-16 text-center text-white">
+          <span className="text-3xl">
+            <Logo tone="light" ring="white" />
+          </span>
+          <p className="font-poster mt-6 text-5xl sm:text-7xl">
+            Votre regard,
+            <br />
+            <span className="inline-block -rotate-2 bg-luneo-black px-4 pb-1">votre signature.</span>
+          </p>
+          <div className="mt-10">
+            <Button href="/lunettes-de-vue" variant="secondary" size="lg">
+              Découvrir nos nouveautés →
+            </Button>
+          </div>
         </div>
       </div>
+      <TornEdge seed={23} flip />
     </section>
   );
 }

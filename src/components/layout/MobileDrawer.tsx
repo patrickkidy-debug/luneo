@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { mainNav } from "@/lib/nav";
+import { Logo } from "@/components/brand/Logo";
 import { SearchBar } from "./SearchBar";
 
 export function MobileDrawer({
@@ -33,9 +34,11 @@ export function MobileDrawer({
         className="absolute inset-0 bg-black/40"
         onClick={onClose}
       />
-      <div className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col gap-6 bg-white p-6 shadow-xl">
+      <div className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col gap-6 bg-luneo-card p-6 shadow-xl">
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-luneo-black">LUNEO</span>
+          <span className="text-base">
+            <Logo />
+          </span>
           <button
             type="button"
             aria-label="Fermer le menu"

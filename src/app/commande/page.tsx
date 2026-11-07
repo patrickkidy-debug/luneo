@@ -31,7 +31,7 @@ export default function CheckoutPage() {
     phone: "",
     email: "",
     address: "",
-    city: "Abidjan",
+    city: "Daloa",
     quartier: "",
     deliveryMode: "domicile",
     paymentMethod: "LIVRAISON",

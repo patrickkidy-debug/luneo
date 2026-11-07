@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="100%" height="100%">
+  <defs>
+    <pattern id="flyerHalftone" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="1.3" fill="#e30613" opacity="0.12" />
+    </pattern>
+    <filter id="fShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="5" dy="5" stdDeviation="0" flood-color="#0a0a0a" flood-opacity="0.9" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-brand { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 900; }
+    .font-poster { font-family: 'Impact', 'Archivo Black', 'Arial Black', sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; }
+    .font-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+
+  <!-- Kraft Beige Base -->
+  <rect width="600" height="850" fill="#F3E6D2" />
+  <rect width="600" height="850" fill="url(#flyerHalftone)" />
+
+  <!-- Top-Left Pop Ribbon -->
+  <path d="M-10 -10 L190 -10 C150 70 120 110 50 150 C20 170 -10 180 -10 180 Z" fill="#E30613" />
+
+  <!-- Top Burst Rays -->
+  <g stroke="#E30613" stroke-width="5" stroke-linecap="round">
+    <line x1="530" y1="40" x2="570" y2="20" />
+    <line x1="545" y1="65" x2="585" y2="60" />
+    <line x1="530" y1="85" x2="570" y2="105" />
+  </g>
+
+  <!-- LUNEO Logo -->
+  <g transform="translate(130, 36)">
+    <text x="0" y="38" class="font-brand" font-size="44" fill="#0A0A0A" letter-spacing="1">LUNE</text>
+    <circle cx="136" cy="24" r="15" fill="none" stroke="#E30613" stroke-width="6" />
+    <text x="0" y="58" class="font-body" font-size="10" font-weight="800" fill="#0A0A0A" letter-spacing="3">VOTRE REGARD, VOTRE SIGNATURE.</text>
+  </g>
+
+  <!-- Punchy Headline -->
+  <g transform="translate(45, 135)">
+    <text x="0" y="40" class="font-poster" font-size="46" fill="#0A0A0A">LE STYLE AUSSI</text>
+    <text x="0" y="85" class="font-poster" font-size="46" fill="#0A0A0A">POUR LES ADOS !</text>
+    <!-- Red Badge Strip -->
+    <g transform="translate(-5, 100) rotate(-2)">
+      <path d="M0 4 L20 0 L140 5 L280 0 L320 4 L315 48 L220 44 L110 48 L0 44 Z" fill="#E30613" filter="url(#fShadow)" />
+      <text x="15" y="34" class="font-poster" font-size="34" fill="#FFFFFF">OUVERTURE À DALOA !</text>
+    </g>
+  </g>
+
+  <!-- Visual Collage Photo Box -->
+  <g transform="translate(290, 140)">
+    <g filter="url(#fShadow)" transform="rotate(2)">
+      <rect x="0" y="0" width="275" height="340" rx="10" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" />
+      <image href="/images/campagnes/style-ados.webp" x="8" y="8" width="259" height="324" preserveAspectRatio="xMidYMid slice" clip-path="inset(0 round 6px)" />
+    </g>
+    <!-- Pop star sticker -->
+    <g transform="translate(190, -10) rotate(15)">
+      <circle cx="30" cy="30" r="30" fill="#E30613" />
+      <text x="30" y="27" class="font-poster" font-size="14" fill="#FFFFFF" text-anchor="middle">OFFRE</text>
+      <text x="30" y="44" class="font-poster" font-size="14" fill="#FFFFFF" text-anchor="middle">CHOC</text>
+    </g>
+  </g>
+
+  <!-- Left Side: White Eyeglasses Illustration -->
+  <g transform="translate(30, 310)">
+    <!-- Frame -->
+    <path d="M15 35 C20 15 55 12 90 22 C105 25 108 55 100 68 C92 80 25 85 18 65 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="4" />
+    <path d="M24 36 C28 22 55 18 85 27 C95 30 96 52 90 62 C82 72 30 74 24 59 Z" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+    
+    <path d="M100 32 C110 28 122 28 132 32 C130 38 102 38 100 32 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3" />
+    
+    <path d="M134 32 C142 25 178 15 212 22 C222 25 225 55 218 68 C210 80 142 85 136 65 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="4" />
+    <path d="M144 36 C148 22 178 18 205 27 C215 30 216 52 210 62 C202 72 150 74 144 59 Z" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+  </g>
+
+  <!-- Price Pill -->
+  <g transform="translate(40, 410)">
+    <line x1="0" y1="28" x2="25" y2="28" stroke="#E30613" stroke-width="3" />
+    <g transform="translate(32, 0)">
+      <rect x="0" y="0" width="170" height="56" rx="28" fill="#FFFFFF" stroke="#E30613" stroke-width="3" filter="url(#fShadow)" />
+      <text x="85" y="20" class="font-brand" font-size="10" font-weight="900" fill="#0A0A0A" text-anchor="middle">À PARTIR DE</text>
+      <text x="85" y="44" class="font-poster" font-size="26" fill="#E30613" text-anchor="middle">12 000 FCFA</text>
+    </g>
+    <line x1="210" y1="28" x2="235" y2="28" stroke="#E30613" stroke-width="3" />
+  </g>
+
+  <!-- 3 Feature Badges Row -->
+  <g transform="translate(45, 490)">
+    <g transform="translate(0, 0)">
+      <circle cx="30" cy="30" r="26" fill="#E30613" filter="url(#fShadow)" />
+      <!-- Glasses Icon -->
+      <g stroke="#FFFFFF" stroke-width="2.5" fill="none" transform="translate(16, 18)">
+        <circle cx="6" cy="12" r="5.5" /><circle cx="22" cy="12" r="5.5" /><path d="M11.5 12 L16.5 12" />
+      </g>
+      <text x="30" y="72" class="font-brand" font-size="11" font-weight="900" fill="#0A0A0A" text-anchor="middle">Montures</text>
+      <text x="30" y="86" class="font-brand" font-size="11" font-weight="900" fill="#0A0A0A" text-anchor="middle">modernes</text>
+    </g>
+
+    <g transform="translate(95, 0)">
+      <circle cx="30" cy="30" r="26" fill="#E30613" filter="url(#fShadow)" />
+      <!-- Feather Icon -->
+      <g stroke="#FFFFFF" stroke-width="2.5" fill="none" transform="translate(18, 16)">
+        <path d="M22 3 C12 3 6 10 6 20 M22 3 C22 13 16 21 8 21 M5 23 L9 19" />
+      </g>
+      <text x="30" y="72" class="font-brand" font-size="11" font-weight="900" fill="#0A0A0A" text-anchor="middle">Légères &amp;</text>
+      <text x="30" y="86" class="font-brand" font-size="11" font-weight="900" fill="#0A0A0A" text-anchor="middle">confortables</text>
+    </g>
+
+    <g transform="translate(190, 0)">
+      <circle cx="30" cy="30" r="26" fill="#E30613" filter="url(#fShadow)" />
+      <!-- Shield Check -->
+      <g stroke="#FFFFFF" stroke-width="2.5" fill="none" transform="translate(18, 16)">
+        <path d="M12 2 L3 6 V13 C3 19 7 23 12 26 C17 23 21 19 21 13 V6 L12 2 Z" /><polyline points="8,13 11,16 16,10" />
+      </g>
+      <text x="30" y="72" class="font-brand" font-size="11" font-weight="900" fill="#0A0A0A" text-anchor="middle">Résistantes</text>
+      <text x="30" y="86" class="font-brand" font-size="11" font-weight="900" fill="#0A0A0A" text-anchor="middle">au quotidien</text>
+    </g>
+  </g>
+
+  <!-- TEAR-OFF COUPON SECTION (Billet Privilège Détachable) -->
+  <g transform="translate(25, 605)">
+    <!-- Scissor cut line -->
+    <line x1="0" y1="0" x2="550" y2="0" stroke="#E30613" stroke-width="2" stroke-dasharray="8 6" />
+    <text x="275" y="-5" class="font-brand" font-size="10" font-weight="900" fill="#E30613" text-anchor="middle">✂ DÉCOUPEZ CE COUPON PRIVILÈGE OUVERTURE ✂</text>
+
+    <!-- Coupon Card -->
+    <rect x="0" y="12" width="550" height="110" rx="10" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" filter="url(#fShadow)" />
+    
+    <!-- Left Discount Stamp -->
+    <g transform="translate(15, 24)">
+      <rect x="0" y="0" width="115" height="84" rx="8" fill="#E30613" />
+      <text x="57" y="32" class="font-poster" font-size="28" fill="#FFFFFF" text-anchor="middle">-20%</text>
+      <text x="57" y="52" class="font-brand" font-size="10" font-weight="900" fill="#FFFFFF" text-anchor="middle">SUR LA 2e PAIRE</text>
+      <text x="57" y="68" class="font-body" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">OU ÉTUI OFFERT</text>
+    </g>
+
+    <!-- Center Coupon Content -->
+    <g transform="translate(145, 30)">
+      <text x="0" y="20" class="font-brand" font-size="15" font-weight="900" fill="#0A0A0A">BON DE BIENVENUE EN MAGASIN</text>
+      <text x="0" y="40" class="font-body" font-size="12" font-weight="700" fill="#E30613">BILAN DE LA VUE GRATUIT SANS ENGAGEMENT</text>
+      <text x="0" y="58" class="font-body" font-size="11" fill="#4B5563">À présenter lors de votre passage chez LUNEO Daloa.</text>
+      <text x="0" y="74" class="font-body" font-size="10" font-weight="800" fill="#0A0A0A">Offre valable jusqu’au 31 décembre • Non cumulable</text>
+    </g>
+
+    <!-- Right Barcode / Stamp -->
+    <g transform="translate(470, 24)">
+      <rect x="0" y="0" width="65" height="84" rx="6" fill="#F3F4F6" stroke="#E5E7EB" />
+      <!-- Barcode simulation -->
+      <g fill="#0A0A0A">
+        <rect x="10" y="10" width="3" height="50" /><rect x="15" y="10" width="1" height="50" />
+        <rect x="18" y="10" width="4" height="50" /><rect x="25" y="10" width="2" height="50" />
+        <rect x="30" y="10" width="1" height="50" /><rect x="33" y="10" width="3" height="50" />
+        <rect x="39" y="10" width="5" height="50" /><rect x="47" y="10" width="2" height="50" />
+        <rect x="52" y="10" width="3" height="50" />
+      </g>
+      <text x="32" y="74" class="font-body" font-size="8" font-weight="700" fill="#0A0A0A" text-anchor="middle">LUNEO-CI</text>
+    </g>
+  </g>
+
+  <!-- Bottom Torn Wave Footer -->
+  <g transform="translate(0, 745)">
+    <path d="M0 20 L50 10 L120 22 L190 8 L270 20 L350 10 L440 22 L520 12 L600 20 L600 105 L0 105 Z" fill="#E30613" />
+    <g transform="translate(30, 32)">
+      <path d="M14 0 C6 0 0 6 0 14 C0 24 14 34 14 34 C14 34 28 24 28 14 C28 6 22 0 14 0 Z" fill="#FFFFFF" />
+      <circle cx="14" cy="13" r="5" fill="#E30613" />
+      <text x="38" y="14" class="font-brand" font-size="12" font-style="italic" fill="#FFFFFF">En magasin à</text>
+      <text x="38" y="36" class="font-poster" font-size="28" fill="#FFFFFF">Daloa</text>
+      <text x="135" y="32" class="font-body" font-size="11" font-weight="600" fill="#FFFFFF">
+        Quartier Commerce, Av. de l'Indépendance (près Pharmacie Centrale)
+      </text>
+    </g>
+  </g>
+</svg>
+
